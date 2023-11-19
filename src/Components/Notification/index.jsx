@@ -2,8 +2,6 @@ import React, { useState } from 'react'
 import NotificationCard from '../NotificationCard'
 import CheckBoxBtn from '../CheckBoxBtn'
 import SelectOptions from '../SelectOptions'
-
-// Import Swiper styles
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import { Autoplay } from 'swiper/modules'
@@ -96,6 +94,7 @@ const Notification = () => {
                     alt="Charts"
                   />
                   <CheckBoxBtn
+                    id={'c1'}
                     checked={checkedBalance}
                     handleChange={handleCheckedBalance}
                   />
@@ -120,6 +119,7 @@ const Notification = () => {
                     alt="Clock"
                   />
                   <CheckBoxBtn
+                    id={'c2'}
                     checked={durationChecked}
                     handleChange={handleDurationChecked}
                   />
