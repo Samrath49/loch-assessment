@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+  * {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  body {
+    font-family: "Inter", sans-serif;
+    background-color: #19191A;
+  }
+
+  label {
+    line-height: 120%;  
+  }
+
+  .notification-card {
+    background-color: #FFF;
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.20) 27.5%, rgba(22, 93, 255, 0.16) 157.71%);
+  }
+
+  .swiper-container {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .swiper-container::before,
+  .swiper-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    filter: blur(2rem);
+    z-index: 50;
+    width: 70px;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.35), transparent);
+    pointer-events: none;
+  }
+  
+  .swiper-container::before {
+    left: 0;
+  }
+  
+  .swiper-container::after {
+    right: 0;
+    transform: scaleX(-1);
+  }
+}
